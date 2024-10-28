@@ -1,6 +1,7 @@
 from services.usuario_service import UsuarioService
 from repositories.usuario_repositories import UsuarioRepository
 from config.database import Session
+import os
 
 def main():
     session = Session()
