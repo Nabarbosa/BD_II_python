@@ -19,7 +19,7 @@ def main():
     print("\nListando usuários cadastrados.")
     listar_usuarios = service.listar_todos_usuarios()
     for usuario in listar_usuarios:
-        print(f"Nome: {usuario.nome} - Email: {usuario.email} - Senha{usuario.senha}")
+        print(f"Nome: {usuario.nome} - Email: {usuario.email} - Senha: {usuario.senha}")
 
 if __name__ == "__main__":
     main()
