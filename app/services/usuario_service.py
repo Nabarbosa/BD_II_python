@@ -7,7 +7,7 @@ class UsuarioService:
         self.repository = repository
 
 
-    def criar_usuario(self, nome: str, email: str, senha; str):
+    def criar_usuario(self, nome: str, email: str, senha: str):
         try:
             usuario = Usuario(nome=nome, email=email, senha=senha)
 
