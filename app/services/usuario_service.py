@@ -1,9 +1,9 @@
 from models.usuario_models import Usuario
-from repositories.usuario_repositories import UsuarioRepositoy
+from repositories.usuario_repositories import UsuarioRepository
 
 class UsuarioService:
 
-    def __init__(self, repository: UsuarioRepositoy):
+    def __init__(self, repository: UsuarioRepository):
         self.repository = repository
 
 
@@ -13,9 +13,8 @@ class UsuarioService:
 
             novo_usuario = self.repository.pesquisar_usuario_por_email(usuario.email)
 
-            if not novo_usuario:
+            if novo_usuario:
                 print("Usuário já cadatrado!")
-                return
 
             self.repository.salvar_usuario(usuario)
             print("Usuário cadastrado com sucesso!")
@@ -25,5 +24,5 @@ class UsuarioService:
             print(f"Ocorreu um erro inesperado: {erro}")
 
 
-        def listar_todos_usuarios(self):
-            return self.repository.listar_usuarios()
+    def listar_todos_usuarios(self):
+        return self.repository.listar_usuarios()
