@@ -3,6 +3,7 @@ from repositories.usuario_repositories import UsuarioRepository
 from config.database import Session
 import os
 
+
 def main():
     session = Session()
     repository = UsuarioRepository(session)
@@ -21,6 +22,7 @@ def main():
     listar_usuarios = service.listar_todos_usuarios()
     for usuario in listar_usuarios:
         print(f"Nome: {usuario.nome} - Email: {usuario.email} - Senha: {usuario.senha}")
+
 
 if __name__ == "__main__":
     main()

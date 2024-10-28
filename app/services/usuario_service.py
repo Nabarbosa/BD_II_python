@@ -1,11 +1,11 @@
 from models.usuario_models import Usuario
 from repositories.usuario_repositories import UsuarioRepository
 
+
 class UsuarioService:
 
     def __init__(self, repository: UsuarioRepository):
         self.repository = repository
-
 
     def criar_usuario(self, nome: str, email: str, senha: str):
         try:
@@ -23,7 +23,6 @@ class UsuarioService:
             print(f"Erro ao salvar o usuário: {erro}")
         except Exception as erro:
             print(f"Ocorreu um erro inesperado: {erro}")
-
 
     def listar_todos_usuarios(self):
         return self.repository.listar_usuarios()
