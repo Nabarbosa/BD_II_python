@@ -15,6 +15,7 @@ class UsuarioService:
 
             if not novo_usuario:
                 print("Usuário já cadatrado!")
+                return
 
             self.repository.salvar_usuario(usuario)
             print("Usuário cadastrado com sucesso!")
