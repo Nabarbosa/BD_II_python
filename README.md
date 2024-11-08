@@ -20,13 +20,14 @@ projeto com pacotes.
 
  No arquivo principal, crie um menu onde seja possível escolher a ação desejada.
  '''
+ #
     === SENAI SOLUTION ===
-1 - Adicionar usuário
-2 - Pesquisar um usuário
-3 - Atualizar dados de um usuário
-4 - Excluir um usuário
-5 - Exibir todos os usuários cadastrados
-0 - Sair
+   -  1 - Adicionar usuário
+   -  2 - Pesquisar um usuário
+   -  3 - Atualizar dados de um usuário
+   -  4 - Excluir um usuário
+   -  5 - Exibir todos os usuários cadastrados
+   -  0 - Sair
 
 Informe a opção desejada:
 '''
