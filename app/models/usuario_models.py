@@ -20,25 +20,25 @@ class Usuario(Base):
         self.email = email
         self.senha = senha
 
-    def _verificar_nome_vazio(self, valor):
-        try:
-            self._verifcar_nome_invalido(valor)
-            self._verificar_nome_vazio(valor)
-        except TypeError as erro:
-            print(f"Erro: {erro}")
-        except Exception as erro:
-            print(f"Erro inesperado: {erro}")
-        self.nome = valor
-        return self.nome
-    
+
+    def _verifcar_nome_invalido(self, valor):
+        if not isinstance(valor, str):
+            raise TypeError("O que está sendo solicitado, deve ser um texto.")
+
     def _verificar_nome_vazio(self, nome):
         if not nome.strip():
             raise ValueError("O que está sendo solicitado, está vazio!")
     
-    def _verifcar_nome_invalido(self, valor):
-        if not isinstance(valor, str):
-            raise TypeError("O que está sendo solicitado, deve ser um texto.")
-        
+    def _verificar_nome_vazio(self, valor):
+        # try:
+            self._verifcar_nome_invalido(valor)
+            self._verificar_nome_vazio(valor)
+        # except TypeError as erro:
+        #     print(f"Erro: {erro}")
+        # except Exception as erro:
+        #     print(f"Erro inesperado: {erro}")
+            self.nome = valor
+            return self.nome
 
     def _verificar_email_usuario(self, email):
         self._verificar_email_invalido(email)
