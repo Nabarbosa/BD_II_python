@@ -34,16 +34,11 @@ class UsuarioService:
             email = input("Digite o e-mail do usuário: ")
             usuario_cadastrado = self.repository.pesquisar_usuario_por_email(email)
 
-            if usuario_cadastrado:
-                senha = input("Informe a senha do usuário para exclui-lo: ")
-
-                if senha == usuario_cadastrado.senha:
-                    self.repository.excluir_usuario(usuario_cadastrado)
-                    print("Usuário excluido com suceso!")
+            self.repository.excluir_usuario(usuario_cadastrado)
+            print("Usuário excluido com suceso!")
                 
-            else:
-                print("Usuário não cadastrado!")
-                return
+            print("Usuário não cadastrado!")
+            return
         
         except TypeError as erro:
             print(f"Erro ao excluir usuário: {erro}")
