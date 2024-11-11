@@ -62,6 +62,7 @@ def main():
 
                 case 5:
                     os.system("cls || clear")
+                    print(" == Listando todos os usuários == ")
                     listar_usuario()
 
                 case 0:
