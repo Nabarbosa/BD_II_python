@@ -1,5 +1,5 @@
-from models.usuario_models import Usuario
-from repositories.usuario_repositories import UsuarioRepository
+from app.models.usuario_models import Usuario
+from app.repositories.usuario_repositories import UsuarioRepository
 import os
 
 
@@ -40,8 +40,7 @@ class UsuarioService:
                 if senha == usuario_cadastrado.senha:
                     self.repository.excluir_usuario(usuario_cadastrado)
                     print("Usuário excluido com suceso!")
-                print("Usuário não encontrado!")
-                return
+                
             else:
                 print("Usuário não cadastrado!")
                 return

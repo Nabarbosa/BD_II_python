@@ -1,7 +1,7 @@
-from services.usuario_service import UsuarioService
-from repositories.usuario_repositories import UsuarioRepository
-from config.database import Session
-from models.usuario_models import Usuario
+from app.services.usuario_service import UsuarioService
+from app.repositories.usuario_repositories import UsuarioRepository
+from app.config.database import Session
+from app.models.usuario_models import Usuario
 import os
 
 def main():
